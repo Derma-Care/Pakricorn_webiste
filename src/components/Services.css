@@ -1,0 +1,163 @@
+.services-section {
+  padding: 6rem 2rem;
+  /* background: linear-gradient(180deg,#e2ecff 0%, #f8faff 100%); */
+  background: #e2ecff;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+.services-title span {
+  color: #A5C0F7;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d6efd, #A5C0F7);
+  transition: 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
+.card h3,
+.card p,
+.card .icon-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  color: #fff;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #0d6efd;
+  transition: 0.3s;
+}
+
+.card:hover h3 {
+  color: #fff;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  transition: 0.3s;
+}
+
+.card:hover p {
+  color: #f0f4ff;
+}
+
+.icon-wrapper {
+  background: #A5C0F7;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.card:hover .icon-wrapper {
+  background: #fff;
+  transform: rotate(360deg);
+}
+
+.icon-wrapper svg {
+  font-size: 2rem;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.card:hover .icon-wrapper svg {
+  color: #0d6efd;
+}
+
+/* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
+  .services-title {
+    font-size: 2.4rem;
+  }
+  .services-subtitle {
+    font-size: 1rem;
+  }
+  .card {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2rem;
+  }
+  .services-subtitle {
+    font-size: 1rem;
+  }
+  .service-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .icon-wrapper svg {
+    font-size: 1.5rem;
+  }
+}

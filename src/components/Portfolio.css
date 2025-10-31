@@ -1,0 +1,156 @@
+.portfolio-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.portfolio-title span {
+  color: #007bff;
+}
+
+.portfolio-subtitle {
+  color: #6c757d;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* Wrapper for cards and buttons */
+.portfolio-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Horizontal scroll container */
+.portfolio-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card design */
+.portfolio-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-image-wrapper {
+  height: 180px;
+  overflow: hidden;
+}
+
+.portfolio-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.portfolio-content h3 {
+  color: #007bff;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.portfolio-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 5;
+}
+
+.scroll-btn:hover {
+  background: #0056b3;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 240px;
+  }
+
+  .portfolio-image-wrapper {
+    height: 150px;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {
+    width: 220px;
+  }
+
+  .portfolio-image-wrapper {
+    height: 130px;
+  }
+
+  .portfolio-title {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .scroll-btn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
