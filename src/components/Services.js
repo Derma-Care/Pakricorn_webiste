@@ -87,7 +87,7 @@ const Services = () => {
   return (
     <section id="services" className="services-section">
       <div className="services-container">
-        <h2 className="about-title">
+        <h2 className="about-title" style={{color:"#A93D01"}}>
           Our <span>Services</span>
         </h2>
         <p className="services-subtitle">

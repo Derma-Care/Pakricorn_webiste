@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Portfolio.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Portfolio = () => {
   const scrollRef = useRef(null);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
 
   const projects = [
     {
@@ -50,9 +52,10 @@ const Portfolio = () => {
     },
   ];
 
+  // Scroll by certain pixels
   const scroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = window.innerWidth < 768 ? 280 : 400; // smaller scroll for small screens
+    const scrollAmount = window.innerWidth < 768 ? 280 : 400;
 
     if (direction === "left") {
       container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -61,9 +64,22 @@ const Portfolio = () => {
     }
   };
 
+  // Detect scroll position to toggle button visibility
+  useEffect(() => {
+    const container = scrollRef.current;
+    const handleScroll = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      setShowLeft(scrollLeft > 0);
+      setShowRight(scrollLeft + clientWidth < scrollWidth - 10);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="portfolio-section" id="portfolio">
-      <h2 className="about-title">
+      <h2 className="about-title" style={{color:"#A93D01"}}>
         Our <span>Projects</span>
       </h2>
       <p className="portfolio-subtitle">
@@ -71,9 +87,11 @@ const Portfolio = () => {
       </p>
 
       <div className="portfolio-wrapper">
-        <button className="scroll-btn left" onClick={() => scroll("left")}>
-          <FaChevronLeft />
-        </button>
+        {showLeft && (
+          <button className="scroll-btn left" onClick={() => scroll("left")}>
+            <FaChevronLeft />
+          </button>
+        )}
 
         <div className="portfolio-scroll" ref={scrollRef}>
           {projects.map((project, index) => (
@@ -89,9 +107,11 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <button className="scroll-btn right" onClick={() => scroll("right")}>
-          <FaChevronRight />
-        </button>
+        {showRight && (
+          <button className="scroll-btn right" onClick={() => scroll("right")}>
+            <FaChevronRight />
+          </button>
+        )}
       </div>
     </section>
   );

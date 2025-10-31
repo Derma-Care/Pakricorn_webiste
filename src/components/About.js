@@ -13,7 +13,7 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-container">
         <div className="about-content">
-          <h2 className="about-title">
+          <h2 className="about-title" style={{color:"#A93D01"}}>
             About <span>Pakricorn</span>
           </h2>
           <p className="about-text">

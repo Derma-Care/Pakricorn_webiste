@@ -5,6 +5,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Careers from "./components/Careers";
 import "./App.css";
 
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
       </section>
       <section id="services">
         <Services />
+      </section>
+      <section id="careers">
+        <Careers />
       </section>
       <section id="portfolio">
         <Portfolio />
