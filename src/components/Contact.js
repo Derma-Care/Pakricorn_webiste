@@ -51,8 +51,8 @@ Sent from Pakricorn Website 🌐`
               Visit <span>Us</span>
             </h2>
             <div className="contact-address-card">
-              <h3>📍 Our Office</h3>
-              <p><strong>Pakricorn Techno Solutions Pvt. Ltd.</strong></p>
+              <h3>📍 Pakricorn Techno Solutions Pvt. Ltd.</h3>
+             
               <p>Plot No. 413, 2nd Floor, Road No. 22, Jubilee Hills, Hyderabad<br />
                 Pincode: 500033</p>
 
