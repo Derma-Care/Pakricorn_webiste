@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import contactImg from "../assets/contact-image.png";
-import './Contact.css'
+import "./Contact.css";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -45,12 +45,41 @@ Sent from Pakricorn Website 🌐`
     <>
       <section id="contact" className="contact-section">
         <div className="contact-container">
-          <div className="contact-image">
-            <img src={contactImg} alt="Contact Us" />
+          {/* 🏢 Left Side – Address Section */}
+          <div className="contact-address-container">
+            <h2 className="about-title">
+              Visit <span>Us</span>
+            </h2>
+            <div className="contact-address-card">
+              <h3>📍 Our Office</h3>
+              <p><strong>Pakricorn Techno Solutions Pvt. Ltd.</strong></p>
+              <p>Plot No. 413, 2nd Floor, Road No. 22, Jubilee Hills, Hyderabad<br />
+                Pincode: 500033</p>
+
+              <p>📞 +91 86887 67603</p>
+              <p>✉️ support@pakricorn.com</p>
+            </div>
+
+            <p className="address-note">
+              We’d love to meet you! Drop by our office or reach us on WhatsApp for quick queries.
+            </p>
+
+            {/* 🗺️ Embedded Google Map */}
+            <div className="map-container">
+              <iframe
+                title="Pakricorn Techno Solutions Location"
+                src="https://www.google.com/maps?q=17.4330,78.4078&z=15&output=embed"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
 
+          {/* 💬 Right Side – Contact Form */}
           <div className="contact-form-container">
-            <h2 className="about-title">Let’s <span>Connect</span> </h2>
+            <h2 className="about-title">
+              Let’s <span>Connect</span>
+            </h2>
             <p>
               Have a project in mind or need help finding the right talent? We’d
               love to hear from you. Reach us directly on WhatsApp!
