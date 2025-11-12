@@ -1,6 +1,6 @@
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(150deg, #17870E ,#A5C0F7);
+  background: linear-gradient(120deg, #033c4e 0%, #415354 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -17,11 +17,9 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0));
   animation: float 8s ease-in-out infinite alternate;
   z-index: 1;
 }
@@ -46,11 +44,9 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0)
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0));
   animation: pulse 3s ease-in-out infinite;
   z-index: 1;
 }
@@ -84,6 +80,7 @@
     transform: translateY(0px);
     opacity: 0.7;
   }
+
   100% {
     transform: translateY(20px);
     opacity: 1;
@@ -95,10 +92,12 @@
     transform: scale(1);
     opacity: 0.3;
   }
+
   50% {
     transform: scale(1.4);
     opacity: 0.6;
   }
+
   100% {
     transform: scale(1);
     opacity: 0.3;
@@ -142,11 +141,11 @@
 
 .hero-btn {
   display: inline-block;
-  background: #ffffff;
-  color: #0d6efd;
+  background: #eefb76;
+  color: #000;
   padding: 0.9rem 2rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -154,8 +153,8 @@
 }
 
 .hero-btn:hover {
-  background: #0d6efd;
-  color: #ffffff;
+  background: #f9b241;
+  color: #000;
   transform: translateY(-3px);
   box-shadow: 0px 5px 20px rgba(13, 110, 253, 0.4);
 }
@@ -185,6 +184,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -196,6 +196,7 @@
   .hero-title {
     font-size: 2.4rem;
   }
+
   .hero-subtitle {
     font-size: 1rem;
   }
@@ -205,13 +206,16 @@
   .hero-title {
     font-size: 2rem;
   }
+
   .hero-subtitle {
     font-size: 0.95rem;
   }
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
+
   .hero-btn {
     width: 80%;
   }
@@ -221,9 +225,11 @@
   .hero-title {
     font-size: 1.6rem;
   }
+
   .hero-subtitle {
     font-size: 0.9rem;
   }
+
   .hero-stats span {
     font-size: 1.4rem;
   }

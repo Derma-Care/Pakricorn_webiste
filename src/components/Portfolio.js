@@ -12,43 +12,43 @@ const Portfolio = () => {
       title: "Kemper Auto",
       description:
         "A digital insurance platform that simplifies policy management and customer experience.",
-      image: `${process.env.PUBLIC_URL}/portfolio-kemper.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-kemper1.png`,
     },
     {
       title: "UWM (United Wholesale Mortgage)",
       description:
         "An enterprise mortgage system for easy loan origination and document management.",
-      image: `${process.env.PUBLIC_URL}/portfolio-uwm.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-uwm.jpg`,
     },
     {
       title: "Payroll System",
       description:
         "Automated payroll solution with tax compliance and secure self-service.",
-      image: `${process.env.PUBLIC_URL}/portfolio-payroll.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-payroll1.png`,
     },
     {
       title: "Medtory",
       description:
         "Healthcare platform connecting doctors, patients, and clinics with online consultations.",
-      image: `${process.env.PUBLIC_URL}/portfolio-medtory.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-medtory1.png`,
     },
     {
       title: "MyEmp",
       description:
         "Employee management app for HR — attendance, task tracking, and communication.",
-      image: `${process.env.PUBLIC_URL}/portfolio-myemp.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-myemp1.png`,
     },
     {
       title: "SmartHR",
       description:
         "End-to-end HR management system with onboarding and performance analytics.",
-      image: `${process.env.PUBLIC_URL}/portfolio-smarthr.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-smarthr1.png`,
     },
     {
       title: "FleetPro",
       description:
         "Fleet tracking system with GPS and route optimization for logistics efficiency.",
-      image: `${process.env.PUBLIC_URL}/portfolio-fleetpro.png`,
+      image: `${process.env.PUBLIC_URL}/portfolio-fleetpro1.png`,
     },
   ];
 

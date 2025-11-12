@@ -43,8 +43,13 @@ Sent from Pakricorn Website 🌐`
 
   return (
     <>
+
       <section id="contact" className="contact-section">
+         <h2 className="about-title" style={{color:"#A93D01"}} >
+          Contact <span> US</span>
+        </h2><br/><br/>
         <div className="contact-container">
+         
           {/* 🏢 Left Side – Address Section */}
           <div className="contact-address-container">
             <h2 className="about-title">

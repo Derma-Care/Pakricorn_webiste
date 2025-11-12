@@ -9,7 +9,7 @@ html {
 /* 📞 Contact Section Layout */
 .contact-section {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #a5c0f7, #4b6cb7);
+   background: #e2ecff;
   display: flex;
   justify-content: center;
   align-items: center;

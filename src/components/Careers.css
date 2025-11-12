@@ -1,22 +1,24 @@
 /* =============================
-   Careers Page - Clean Modern UI
+   Careers Page - Modern Elegant Theme
    ============================= */
+
 .careers-section {
   padding: 6rem 2rem;
   text-align: center;
-  background: #ffffff;
-  overflow: hidden;
+  background: #f9f9ff;
+  font-family: "Poppins", sans-serif;
 }
 
+/* --- Header --- */
 .careers-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #222;
   margin-bottom: 0.5rem;
+  color: #3f3d56;
 }
 
 .careers-title span {
-  color: #0d6efd;
+  color: #6c63ff;
 }
 
 .careers-subtitle {
@@ -31,35 +33,35 @@
 .careers-culture {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: -30px;
   flex-wrap: wrap;
+  gap: 2rem;
   margin-bottom: 5rem;
 }
 
 .culture-card {
-  background: #f8faff;
+  background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.06);
+  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.08);
   padding: 2.5rem 2rem;
   width: 320px;
   transition: all 0.4s ease;
   text-align: center;
+  border: 1px solid #e0e0ff;
 }
 
 .culture-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.1);
+  box-shadow: 0 15px 35px rgba(108, 99, 255, 0.18);
 }
 
 .culture-icon {
   font-size: 2.8rem;
-  color: #0d6efd;
+  color: #6c63ff;
   margin-bottom: 1rem;
 }
 
 .culture-card h3 {
-  color: #0d6efd;
+  color: #3f3d56;
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
 }
@@ -70,37 +72,127 @@
   line-height: 1.6;
 }
 
-/* --- Openings Section --- */
+/* --- Current Openings --- */
 .careers-openings {
-  margin-top: -2rem;
+  margin-top: 2rem;
 }
 
 .openings-title {
-  font-size: 1.6rem;
-  color: #0d6efd;
-  margin-bottom: 1rem;
+  font-size: 2rem;
   font-weight: 600;
+  color: #3f3d56;
+  margin-bottom: 2rem;
 }
 
-.no-openings {
-  font-size: 1.1rem;
+/* --- Openings Grid --- */
+.openings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  
+}
+
+/* --- Opening Card --- */
+.opening-card {
+  background: linear-gradient(135deg, #ffffff, #f1f0ff);
+  border: 1px solid #d8d4ff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.08);
+  padding: 2rem;
+  text-align: left;
+  width: 360px;
+  transition: all 0.3s ease;
+  position: relative;
+  
+}
+
+.opening-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(108, 99, 255, 0.15);
+  background: linear-gradient(135deg, #f8f7ff, #eae6ff);
+}
+
+/* --- Header Inside Card --- */
+.opening-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.opening-icon {
+  font-size: 2.4rem;
+  color: #6c63ff;
+}
+
+.opening-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3f3d56;
+  margin: 0;
+}
+
+.opening-type {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* --- Opening Description --- */
+.opening-description {
   color: #444;
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
+/* --- Details (Experience, Skills) --- */
+.opening-details {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.opening-details div {
+  margin-bottom: 0.3rem;
+}
+
+/* --- Apply Button --- */
+.apply-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #6c63ff, #a084e8);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(135deg, #574bff, #8d78e8);
+  transform: translateY(-2px);
+}
+
+/* --- Update Note --- */
 .update-note {
   font-size: 0.95rem;
   color: #666;
   font-style: italic;
+  margin-top: 2rem;
 }
 
-/* --- Responsive Design --- */
+/* --- Responsive --- */
 @media (max-width: 992px) {
   .careers-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   .culture-card {
     width: 280px;
+  }
+  .opening-card {
+    width: 320px;
   }
 }
 
@@ -117,9 +209,14 @@
     font-size: 1rem;
   }
 
-  .culture-card {
+  .openings-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opening-card {
     width: 100%;
-    max-width: 340px;
+    max-width: 350px;
   }
 }
 
