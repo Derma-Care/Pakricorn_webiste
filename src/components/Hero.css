@@ -111,12 +111,12 @@
   animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero-title {
+.hero-titles {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.3;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #ffffff, #e6ecff);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

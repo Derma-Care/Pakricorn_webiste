@@ -19,13 +19,15 @@
     />
     <meta name="author" content="Pakricorn Technologies" />
 
-    <!-- 🌐 Open Graph (for social media preview) -->
+    <!-- 🌐 Open Graph (Social Media Preview) -->
     <meta property="og:title" content="Pakricorn Techno Solutions" />
     <meta
       property="og:description"
       content="We build modern digital experiences with React, Ionic, and cutting-edge web technologies."
     />
-    <meta property="og:image" content="%PUBLIC_URL%/pakricorn1.png" />
+    <meta property="og:image" content="%PUBLIC_URL%/pakricorn4.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://pakricorn.com" />
     <meta property="og:type" content="website" />
 
@@ -36,11 +38,33 @@
       name="twitter:description"
       content="Empowering Digital Growth through Technology and Innovation."
     />
-    <meta name="twitter:image" content="%PUBLIC_URL%/pakricorn1.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/pakricorn4.png" />
 
-    <!-- 📱 Icons -->
-    <link rel="icon" href="%PUBLIC_URL%/pakricorn1.png" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/pakricorn1.png" />
+    <!-- 📱 Icons (Large Logo Support) -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="%PUBLIC_URL%/pakricorn4.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="%PUBLIC_URL%/pakricorn4.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="%PUBLIC_URL%/pakricorn4.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="%PUBLIC_URL%/pakricorn4.png"
+    />
 
     <!-- 📋 Manifest (for PWA support) -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -51,7 +75,7 @@
       rel="stylesheet"
     />
 
-    <!-- 💅 Custom CSS (optional global styles) -->
+    <!-- 💅 Global Styles -->
     <style>
       body {
         margin: 0;
@@ -62,11 +86,13 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+
       #root {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
       }
+
       noscript {
         text-align: center;
         font-size: 1rem;
@@ -75,7 +101,7 @@
       }
     </style>
 
-    <!-- 📛 Title -->
+    <!-- 📛 Page Title -->
     <title>Pakricorn Techno Solutions</title>
   </head>
 
@@ -83,6 +109,7 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+
     <div id="root"></div>
   </body>
 </html>

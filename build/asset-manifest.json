@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.64b59fcc.css",
+    "main.css": "/static/css/main.c33706fd.css",
     "main.js": "/static/js/main.d017383b.js",
     "static/media/about-us-illustration.png": "/static/media/about-us-illustration.e0603d172f5f563b6bbc.png",
     "static/media/pakricorn3.png": "/static/media/pakricorn3.f002b3edbcfc82db43dc.png",
     "index.html": "/index.html",
-    "main.64b59fcc.css.map": "/static/css/main.64b59fcc.css.map",
+    "main.c33706fd.css.map": "/static/css/main.c33706fd.css.map",
     "main.d017383b.js.map": "/static/js/main.d017383b.js.map"
   },
   "entrypoints": [
-    "static/css/main.64b59fcc.css",
+    "static/css/main.c33706fd.css",
     "static/js/main.d017383b.js"
   ]
 }
