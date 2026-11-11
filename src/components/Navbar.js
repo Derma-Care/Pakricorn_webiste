@@ -4,7 +4,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import "./Navbar.css";
-import logo from "../assets/pakricorn1.png";
+import logo from "../assets/pakricorn3.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

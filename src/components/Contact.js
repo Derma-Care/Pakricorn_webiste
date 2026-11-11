@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import contactImg from "../assets/contact-image.png";
-import './Contact.css'
+import "./Contact.css";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,7 +20,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
-    const phoneNumber = "918688767603";
+    const phoneNumber = "919381396478";
 
     const text = encodeURIComponent(
       `🌟 New Contact Message from Website 🌟
@@ -32,7 +32,7 @@ const Contact = () => {
 ${message}
 
 ---------------------------
-Sent from Pakricorn Website 🌐`
+Sent from Pakricorn Website 🌐`,
     );
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
@@ -44,13 +44,50 @@ Sent from Pakricorn Website 🌐`
   return (
     <>
       <section id="contact" className="contact-section">
+        <h2 className="about-title" style={{ color: "#A93D01" }}>
+          Contact <span> US</span>
+        </h2>
+        <br />
+        <br />
         <div className="contact-container">
-          <div className="contact-image">
-            <img src={contactImg} alt="Contact Us" />
+          {/* 🏢 Left Side – Address Section */}
+          <div className="contact-address-container">
+            <h2 className="about-title">
+              Visit <span>Us</span>
+            </h2>
+            <div className="contact-address-card">
+              <h3>📍 Pakricorn Techno Solutions Pvt. Ltd.</h3>
+
+              <p>
+                Pot No 490, Road Number 10 , Jubilee Hills , Hyderabad - 500033
+              </p>
+
+              <p>📞 +91 9381396478</p>
+              <p>✉️ support@pakricorn.com</p>
+            </div>
+
+            <p className="address-note">
+              We’d love to meet you! Drop by our office or reach us on WhatsApp
+              for quick queries.
+            </p>
+
+            {/* 🗺️ Embedded Google Map */}
+            <div className="map-container">
+              <iframe
+                title="Pakricorn Techno Solutions Location"
+                src="https://maps.google.com/maps?q=PAKRICORN+TECHNO&ll=17.4329959,78.4079044&z=17&output=embed"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
+          {/* 💬 Right Side – Contact Form */}
           <div className="contact-form-container">
-            <h2 className="about-title">Let’s <span>Connect</span> </h2>
+            <h2 className="about-title">
+              Let’s <span>Connect</span>
+            </h2>
             <p>
               Have a project in mind or need help finding the right talent? We’d
               love to hear from you. Reach us directly on WhatsApp!
