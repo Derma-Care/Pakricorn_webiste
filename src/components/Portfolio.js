@@ -9,6 +9,18 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "PhysioReach",
+      description:
+        "PhysioReach connects clinics, therapists, and patients through home physiotherapy services, therapist management, home visit scheduling, live tracking, and patient feedback.",
+      image: `${process.env.PUBLIC_URL}/portfolio-physioreach.png`,
+    },
+    {
+      title: "PhysioBridge",
+      description:
+        "Connecting healthcare professionals through seamless referrals, trusted collaborations, and better patient care.",
+      image: `${process.env.PUBLIC_URL}/portfolio-physiobridge.png`,
+    },
+    {
       title: "Kemper Auto",
       description:
         "A digital insurance platform that simplifies policy management and customer experience.",
@@ -52,10 +64,13 @@ const Portfolio = () => {
     },
   ];
 
+  const [isPaused, setIsPaused] = useState(false);
+
   // Scroll by certain pixels
   const scroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = window.innerWidth < 768 ? 280 : 400;
+    if (!container) return;
+    const scrollAmount = window.innerWidth < 768 ? 280 : 360;
 
     if (direction === "left") {
       container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -67,6 +82,7 @@ const Portfolio = () => {
   // Detect scroll position to toggle button visibility
   useEffect(() => {
     const container = scrollRef.current;
+    if (!container) return;
     const handleScroll = () => {
       const { scrollLeft, scrollWidth, clientWidth } = container;
       setShowLeft(scrollLeft > 0);
@@ -77,34 +93,64 @@ const Portfolio = () => {
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Automatic scrolling loop (pauses when hovered or touched)
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      const container = scrollRef.current;
+      if (!container) return;
+
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      // If reached near the end, loop back smoothly to start
+      if (scrollLeft + clientWidth >= scrollWidth - 20) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        const step = window.innerWidth < 768 ? 280 : 350;
+        container.scrollBy({ left: step, behavior: "smooth" });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   return (
     <section className="portfolio-section" id="portfolio">
-      <h2 className="about-title" style={{color:"#A93D01"}}>
+      <h2 className="about-title" style={{ color: "#A93D01" }}>
         Our <span>Projects</span>
       </h2>
       <p className="portfolio-subtitle">
         Transforming ideas into impactful digital experiences across industries.
       </p>
 
-      <div className="portfolio-wrapper">
+      <div
+        className="portfolio-wrapper"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+      >
         {showLeft && (
           <button className="scroll-btn left" onClick={() => scroll("left")}>
             <FaChevronLeft />
           </button>
         )}
 
-        <div className="portfolio-scroll" ref={scrollRef}>
-          {projects.map((project, index) => (
-            <div className="portfolio-card" key={index}>
-              <div className="portfolio-image-wrapper">
-                <img src={project.image} alt={project.title} />
+        <div className="portfolio-marquee-container" ref={scrollRef}>
+          <div className="portfolio-track">
+            {/* Render 2 sets to make the infinite continuous ticker completely seamless */}
+            {[...projects, ...projects].map((project, index) => (
+              <div className="portfolio-card" key={index}>
+                <div className="portfolio-image-wrapper">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className="portfolio-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
               </div>
-              <div className="portfolio-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {showRight && (

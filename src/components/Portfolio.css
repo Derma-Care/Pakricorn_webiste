@@ -32,7 +32,7 @@
 }
 
 /* =============================
-   Portfolio Wrapper and Scroll
+   Portfolio Wrapper and Marquee Animation
    ============================= */
 .portfolio-wrapper {
   position: relative;
@@ -40,21 +40,63 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
 }
 
-/* Horizontal scroll container */
-.portfolio-scroll {
+/* Gradient fade masks on edges */
+.portfolio-wrapper::before,
+.portfolio-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.portfolio-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa, rgba(248, 249, 250, 0));
+}
+
+.portfolio-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa, rgba(248, 249, 250, 0));
+}
+
+/* Marquee track container */
+.portfolio-marquee-container {
   display: flex;
+  width: 100%;
   overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 24px;
-  padding: 10px;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 20px;
+  scrollbar-width: none;
 }
 
-.portfolio-scroll::-webkit-scrollbar {
+.portfolio-marquee-container::-webkit-scrollbar {
   display: none;
+}
+
+.portfolio-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: portfolioScroll 32s linear infinite;
+}
+
+/* Pause marquee when hovering over the track */
+.portfolio-wrapper:hover .portfolio-track {
+  animation-play-state: paused;
+}
+
+@keyframes portfolioScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* =============================

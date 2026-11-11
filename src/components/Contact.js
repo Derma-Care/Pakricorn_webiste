@@ -20,7 +20,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
-    const phoneNumber = "918688767603";
+    const phoneNumber = "919381396478";
 
     const text = encodeURIComponent(
       `🌟 New Contact Message from Website 🌟
@@ -32,7 +32,7 @@ const Contact = () => {
 ${message}
 
 ---------------------------
-Sent from Pakricorn Website 🌐`
+Sent from Pakricorn Website 🌐`,
     );
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
@@ -43,13 +43,13 @@ Sent from Pakricorn Website 🌐`
 
   return (
     <>
-
       <section id="contact" className="contact-section">
-         <h2 className="about-title" style={{color:"#A93D01"}} >
+        <h2 className="about-title" style={{ color: "#A93D01" }}>
           Contact <span> US</span>
-        </h2><br/><br/>
+        </h2>
+        <br />
+        <br />
         <div className="contact-container">
-         
           {/* 🏢 Left Side – Address Section */}
           <div className="contact-address-container">
             <h2 className="about-title">
@@ -57,25 +57,28 @@ Sent from Pakricorn Website 🌐`
             </h2>
             <div className="contact-address-card">
               <h3>📍 Pakricorn Techno Solutions Pvt. Ltd.</h3>
-             
-              <p>Plot No. 413, 2nd Floor, Road No. 22, Jubilee Hills, Hyderabad<br />
-                Pincode: 500033</p>
 
-              <p>📞 +91 86887 67603</p>
+              <p>
+                Pot No 490, Road Number 10 , Jubilee Hills , Hyderabad - 500033
+              </p>
+
+              <p>📞 +91 9381396478</p>
               <p>✉️ support@pakricorn.com</p>
             </div>
 
             <p className="address-note">
-              We’d love to meet you! Drop by our office or reach us on WhatsApp for quick queries.
+              We’d love to meet you! Drop by our office or reach us on WhatsApp
+              for quick queries.
             </p>
 
             {/* 🗺️ Embedded Google Map */}
             <div className="map-container">
               <iframe
                 title="Pakricorn Techno Solutions Location"
-                src="https://www.google.com/maps?q=17.4330,78.4078&z=15&output=embed"
+                src="https://maps.google.com/maps?q=PAKRICORN+TECHNO&ll=17.4329959,78.4079044&z=17&output=embed"
                 allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
