@@ -44,19 +44,18 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-margin-top: -10px;
-  width: 250px;
-  height: 55px;
-  border-radius: 8px;
-  overflow: hidden;
+  justify-content: flex-start;
+  width: auto;
+  max-width: 220px;
+  height: 50px;
   cursor: pointer;
 }
 
 .logo-img {
-  width: 110%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: 44px;
+  object-fit: contain;
   border: none;
   box-shadow: none;
 }
@@ -93,9 +92,9 @@ margin-top: -10px;
 /* === NAV LINKS === */
 .navLink {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #1e293b;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.3px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
@@ -107,7 +106,7 @@ margin-top: -10px;
 .navLink.active {
   color: #F27A1A;
   border-bottom: 2px solid #F27A1A;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ================================
@@ -201,8 +200,9 @@ margin-top: -10px;
   }
 
   .navLink {
-    color: #FFFFFF;
+    color: #1e293b;
     font-size: 1rem;
+    font-weight: 600;
   }
 
   .navLink.active {

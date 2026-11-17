@@ -4,7 +4,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 import "./Navbar.css";
-import logo from "../assets/pakricorn3.png";
+import logo from "../assets/pakricorn_new_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
   // Update active link while scrolling
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services","careers", "portfolio", "contact"];
+      const sections = ["home", "about", "services", "careers", "products", "portfolio", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach((section) => {
@@ -87,6 +87,14 @@ const Navbar = () => {
                 className={`navLink ${activeSection === "careers" ? "active" : ""}`}
               >
                 Careers
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("products")}
+                className={`navLink ${activeSection === "products" ? "active" : ""}`}
+              >
+                Products
               </button>
             </li>
             <li>

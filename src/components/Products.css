@@ -1,0 +1,339 @@
+/* =============================
+   Products Page - Styled Consistently with Website Theme
+   ============================= */
+
+.products-section {
+  padding: 6rem 2rem;
+  background: #e2ecff; /* Matching Services & Contact background */
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+}
+
+.products-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* --- Section Header --- */
+.products-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #a93d01;
+}
+
+.products-title span {
+  color: #17870e; /* Green accent matching About section branding */
+}
+
+.products-subtitle {
+  color: #4b5563;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  line-height: 1.6;
+}
+
+/* --- Cards Grid --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* --- Product Card --- */
+.product-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #dce6f9;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(13, 110, 253, 0.16);
+}
+
+/* --- Top Banner & Badges --- */
+.product-card-banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f0f4fc;
+}
+
+.product-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-banner-img {
+  transform: scale(1.03);
+}
+
+.banner-badge {
+  position: absolute;
+  top: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(3, 20, 48, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.banner-badge-left {
+  left: 14px;
+}
+
+.banner-badge-left .brand-tag {
+  color: #00e5a3;
+  letter-spacing: 0.5px;
+}
+
+.banner-badge-left .module-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.banner-badge-right {
+  right: 14px;
+  background: rgba(3, 20, 48, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* --- Card Body --- */
+.product-card-body {
+  padding: 2rem 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #ffffff;
+}
+
+.product-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.product-logo-icon {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.product-developed {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 1.1rem;
+}
+
+.product-developed span {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.product-highlight-headline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+}
+
+.green-headline {
+  color: #17870e; /* Pakricorn Green theme */
+}
+
+.orange-headline {
+  color: #a93d01; /* Pakricorn Orange theme */
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.35rem;
+}
+
+/* --- Feature Callout Box --- */
+.product-feature-box {
+  background: #f4f8ff;
+  border: 1px solid #d8e5ff;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.feature-box-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #1e293b;
+  margin-bottom: 0.4rem;
+}
+
+.feature-icon {
+  color: #0d6efd;
+  font-size: 1.05rem;
+}
+
+.feature-box-desc {
+  font-size: 0.82rem;
+  color: #556987;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* --- Checklist Grid --- */
+.product-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1.1rem;
+  margin-bottom: 1.8rem;
+  margin-top: auto;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.check-icon {
+  color: #17870e;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* --- Card Footer --- */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.3rem;
+  border-top: 1px solid #eef2f9;
+}
+
+.footer-tag {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.spec-btn {
+  background: #17870e;
+  color: #ffffff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  box-shadow: 0 3px 8px rgba(23, 135, 14, 0.25);
+}
+
+.spec-btn:hover {
+  background: #126e0a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(23, 135, 14, 0.35);
+}
+
+.orange-spec-btn {
+  background: #a93d01;
+  box-shadow: 0 3px 8px rgba(169, 61, 1, 0.25);
+}
+
+.orange-spec-btn:hover {
+  background: #873101;
+  box-shadow: 0 6px 14px rgba(169, 61, 1, 0.35);
+}
+
+.spec-arrow {
+  font-size: 0.85rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-banner {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-section {
+    padding: 4rem 1rem;
+  }
+
+  .products-title {
+    font-size: 2.2rem;
+  }
+
+  .products-card-body {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .banner-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .product-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .spec-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
